@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/service.css}">
+    <title>Student Management App Services Page</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <h1>Student <b class="highlight">Management</b> <span>App</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{/students}">ManageStudents</a></li>
+                    <li><a th:href="@{/about}">About us</a></li>
+                    <li class="current"><a th:href="@{/services}">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    
+    <section id="main">
+        <div class="container">
+            <h1>Welcome to the Services Page</h1>
+        </div>
+        
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">Services that we offer ---->>></h1>
+                <ul id="services">
+                    <li>
+                        <h3>Website design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, corrupti non 
+                            asperiores voluptatibus natus tenetur tempora, 
+                            incidunt in optio beatae repellat doloremque totam quisquam.
+                             Facere fugiat delectus illum repudiandae hic?</p>
+                             <p>pricing: 3000-5000</p>
+                            </li>
+                    <li>
+                        <h3>Enterprise development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, corrupti non 
+                            asperiores voluptatibus natus tenetur tempora, 
+                            incidunt in optio beatae repellat doloremque totam quisquam.
+                             Facere fugiat delectus illum repudiandae hic?</p>
+                             <p>pricing: 3000-5000</p>
+                    </li>
+                    <li>
+                        <h3>Hosting of websites</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, corrupti non 
+                            asperiores voluptatibus natus tenetur tempora, 
+                            incidunt in optio beatae repellat doloremque totam quisquam.
+                             Facere fugiat delectus illum repudiandae hic?</p>
+                             <p>pricing: 3000-5000</p>
+                    </li>
+                </ul>
+            </article>
+            
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>Get a Quote</h3>
+                    <form action="process.java" class="quote">
+                        <div>
+                            <label for="name"></label><br>
+                            <input type="text"  id="name" placeholder="Enter Name">
+                        </div>
+                        <div>
+                            <label for="email"></label><br>
+                            <input type="email"  id="email" placeholder="Email Address">
+                        </div>
+                        <div>
+                            <label for="message"></label><br>
+                           <textarea  id="message" placeholder="Message"></textarea>
+                        </div>
+                        <button class="button_1">Send</button>
+                    </form>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        
+        <section id="newsletter">
+         <div class="container">
+             <h1>Subscribe to my newslatter</h1>
+             <form action="process.java">
+                 <input type="email" placeholder="Enter Email...">
+                 <button type="submit" class="button_1">Subscribe</button>
+             </form>
+         </div>
+     </section>
+
+    <footer>
+        <p>Okeke Chisom Student Management App, &copy copyright </p>
+    </footer>
+
+   
+     </body>
+</html>
+       

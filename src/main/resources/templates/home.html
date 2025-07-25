@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <title>Student Management App Home Page</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <h1>Student <b class="highlight">Management</b> <span>App</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{/students}">ManageStudents</a></li>
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/service">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- working on the herosection  -->
+     <section id="heroSection">
+        <div class="container">
+            <h1>Welcome to Student Management Program App</h1>
+            <p>
+                This is the best program you can ever encounter
+                while scrolling across the web, this application
+                has the ability to make a user probably a student to register , and 
+                enroll into a course and also a user can register as a suoer user
+                who has the ability to track the student being registered and delete
+                update, and can also add a new user without the user even registering...
+            </p>
+        </div>
+     </section>
+       
+     <!-- working on the courses offered in the program section  -->
+     <section id="boxes">
+        <div class="container">
+            <h1 class="label">Courses offered in the System</h1>
+            <div class="box">
+                <img th:src="@{/images/java.png}" alt="java">
+                <h3>Software Development Course</h3>
+                <h4>price: 170000 30% off</h4>
+                <p>Lorem, ipsum dolor sit amet 
+                    consectetur adipisicing elit.
+                     Et nisi pariatur molestias hic
+                      ducimus at architecto porro unde rerum 
+                      maxime ea saepe, necessitatibus cumque
+                       qui totam
+                     molestiae fuga laudantium ipsam!</p>
+            </div>
+            <div class="box">
+                <img th:src="@{/images/cart2.jpg}" alt="java">
+                <h3>Software Development Course</h3>
+                <h4>price: 170000 30% off</h4>
+                <p>Lorem, ipsum dolor sit amet 
+                    consectetur adipisicing elit.
+                     Et nisi pariatur molestias hic
+                      ducimus at architecto porro unde rerum 
+                      maxime ea saepe, necessitatibus cumque
+                       qui totam
+                     molestiae fuga laudantium ipsam!</p>
+            </div>
+            <div class="box">
+                <img th:src="@{/images/dol-img2.jpeg}" alt="java">
+                <h3>Software Development Course</h3>
+                <h4>price: 170000 30% off</h4>
+                <p>Lorem, ipsum dolor sit amet 
+                    consectetur adipisicing elit.
+                     Et nisi pariatur molestias hic
+                      ducimus at architecto porro unde rerum 
+                      maxime ea saepe, necessitatibus cumque
+                       qui totam
+                     molestiae fuga laudantium ipsam!</p>
+            </div>
+        </div>
+     </section>
+     
+     <!-- working on the graduated students section  -->
+     <section id="boxes">
+        <div class="container">
+            <h1 class="label">Students that graduated in the System</h1>
+           <div class="box">
+                <img th:src="@{/images/cart4.jpg}" alt="java">
+                <h3>Mary Magdalene</h3>
+                <h4>A graduate of Digital Marketing Course</h4>
+                <p>Lorem, ipsum dolor sit amet 
+                    consectetur adipisicing elit.
+                     Et nisi pariatur molestias hic
+                      ducimus at architecto porro unde rerum 
+                      maxime ea saepe, necessitatibus cumque
+                       qui totam
+                     molestiae fuga laudantium ipsam!</p>
+            </div>
+           <div class="box">
+                <img th:src="@{/images/woman.jpg}" alt="java">
+                <h3>Okeke Franca</h3>
+                <h4>A graduate of Full Stack Website Development Course</h4>
+                <p>Lorem, ipsum dolor sit amet 
+                    consectetur adipisicing elit.
+                     Et nisi pariatur molestias hic
+                      ducimus at architecto porro unde rerum 
+                      maxime ea saepe, necessitatibus cumque
+                       qui totam
+                     molestiae fuga laudantium ipsam!</p>
+            </div>
+           <div class="box">
+                <img th:src="@{/images/cart2.jpg}" alt="java">
+                <h3>Zacheus Mercy</h3>
+                <h4>A graduate of Software Development Course</h4>
+                <p>Lorem, ipsum dolor sit amet 
+                    consectetur adipisicing elit.
+                     Et nisi pariatur molestias hic
+                      ducimus at architecto porro unde rerum 
+                      maxime ea saepe, necessitatibus cumque
+                       qui totam
+                     molestiae fuga laudantium ipsam!</p>
+            </div>
+        </div>
+     </section>
+
+      <footer>
+        <p>Okeke Chisom Student Management App, &copy copyright </p>
+    </footer>
+
+
+</body>
+</html>

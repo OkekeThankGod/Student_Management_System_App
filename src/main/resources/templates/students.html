@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Student Management Program</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	<div th:replace="navbar :: navbar"></div>
+
+	
+	<div th:if="${successMessage}" class="success-message">
+    <p th:text="${successMessage}"></p>
+</div>
+
+<div class="container">
+    <h1>List of all the  Students Available in the Database</h1>
+
+    <a th:href="@{/students/new}">
+        <button>Add Student</button>
+    </a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.firstName}"></td>
+                <td th:text="${student.lastName}"></td>
+                <td th:text="${student.email}"></td>
+                <td>
+					<!-- 
+						here in the a tag we picked the api from the edit controller
+						the /students comes from the requestMapping("/students")
+						and the /edit/{id} comes from the showEditForm(/edit/{id})
+						and then according to thymeleaf in a bracket use id to get 
+						the student with the is that is coming from the api
+						so this principles applies to other apis with id 
+					-->
+                    <a th:href="@{/students/edit/{id}(id=${student.id})}">
+                        <button>Edit</button>
+                    </a>
+                    <a th:href="@{/students/delete/{id}(id=${student.id})}">
+                        <button>Delete</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

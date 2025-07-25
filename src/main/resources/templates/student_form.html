@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	
+	 <!-- a replaceable navbar -->
+	<div th:replace="navbar :: navbar"></div>
+
+<div class="form-container">
+	<!-- 
+		this h2 tag carries alot but this is a conditional statement
+		which states that if the student which is a variable that will loop through the 
+		students api, so if the student i.e a student with a particular id is not null or empty
+		then update the student or add a new student
+	-->
+    <h2 th:text="${student.id != null} ? 'Update Student' : 'Add New Student'"></h2>
+
+    <!--  Start of form tag -->
+    <!--here inside the form we have 3 elements 
+    1. determines the path or api from the backend
+    2.is like a variable to store the info
+    3. the http method request
+    
+     -->
+    <form th:action="@{/students/save}" th:object="${student}" method="post">
+
+        <div class="form-group">
+            <label>First Name:</label>
+            <!--in the input tag 
+            1.the type is text
+            2.and the field determines the column to map the firstname coming from the api
+            3 and then the placeholder is an awareness of what to input
+            
+             -->
+            <input type="text" th:field="*{firstName}" placeholder="Enter First Name"/>
+            <div class="error" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Last Name:</label>
+            <input type="text" th:field="*{lastName}" placeholder="Enter Last Name"/>
+            <div class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" th:field="*{email}" placeholder="Enter Email"/>
+            <div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+        </div>
+
+        <div class="form-buttons">
+            <button type="submit">Save</button>
+            <a href="/students">Cancel</a>
+        </div>
+    </form>
+    <!--  End of form tag -->
+
+</div>
+</body>
+</html>
